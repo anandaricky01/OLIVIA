@@ -26,14 +26,16 @@ class ArtikelController extends Controller
         return view('artikel', [
             "title" => "Artikel " . $title,
             "artikel" => Artikel::latest()->filter(request(['search', 'category', 'user']))->paginate(7)->withQueryString(),
-            "listCategory" => Category::all()
+            "listCategory" => Category::all(),
+            'active' => 'artikel'
         ]);
     }
 
     public function show( Artikel $artikel ){
         return view('artikelSingle',[
             "title" => $artikel->title,
-            "artikel" => $artikel
+            "artikel" => $artikel,
+            'active' => 'artikel'
         ]);
     }
 }

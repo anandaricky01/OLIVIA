@@ -22,13 +22,15 @@ use App\Models\User;
 
 Route::get('/',function(){
     return view('landingPage',[
-        'title'=>'Home'
+        'title'=>'Home',
+        'active' => 'home'
     ]);
 });
 
 Route::get('/about',function(){
     return view('about',[
-        'title'=>'About'
+        'title'=>'About',
+        'active' => 'about'
     ]);
 });
 
