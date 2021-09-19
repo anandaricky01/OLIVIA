@@ -18,7 +18,7 @@
                     {{-- method default nya get --}}
                     <div class="input-group mb-3">
                         <input type="text" class="form-control" placeholder="Search.." aria-label="Recipient's username" aria-describedby="button-addon2" name="search" value="{{ request('search') }}">
-                        <button class="btn btn-primary" type="submit">Search</button>
+                        <button class="btn text-white" type="submit">Search</button>
                     </div>
                 </form>
             </div>
@@ -30,14 +30,14 @@
     @foreach ($listCategory as $art)
         <div class="row">
             <div class="col">
-                <a href="/artikel?category={{ $art->slug }}" class="btn btn-outline-primary mb-1 me-3">+ {{ $art->name }}</a>
+                <a href="/artikel?category={{ $art->slug }}" class="btn mb-1 me-3 text-white">+ {{ $art->name }}</a>
             </div>
         </div>
     @endforeach
     </div>
 
     @if ($artikel->count() > 0)
-        
+        <div class="container">
         {{-- artikel terbaru terakhir --}}
         <div class="card mb-3 shadow p-3 mb-5 bg-body rounded mt-3">
             <a href="/artikel/{{ $artikel[0]->slug }}">
@@ -50,9 +50,9 @@
                         By : <a href="/artikel?user={{ $artikel[0]->user->username }}" class="text-decoration-none">{{ $artikel[0]->user->name }}</a> in <a href="/artikel?category={{ $artikel[0]->category->slug }}" class="text-decoration-none">{{ $artikel[0]->category->name }}</a> {{ $artikel[0]->created_at->diffForHumans() }}
                     </small>
                 </p>
-                <a href="/artikel?category={{ $artikel[0]->category->slug }}" class="btn btn-outline-primary mb-1">+ {{ $artikel[0]->category->name }}</a>
+                <a href="/artikel?category={{ $artikel[0]->category->slug }}" class="btn mb-1 text-white">+ {{ $artikel[0]->category->name }}</a>
                 <p class="card-text">{{ $artikel[0]->excerpt }}</p>
-                <a class="btn btn-primary" href="/artikel/{{ $artikel[0]->slug }}">read more</a>
+                <a class="btn text-white" href="/artikel/{{ $artikel[0]->slug }}">read more</a>
             </div>
         </div>
 
@@ -69,7 +69,7 @@
                                 <h5 class="card-title">{{ $arr->title }}</h5>
                                 <p class="card-text text-muted">post by : <a href="/artikel?user={{ $arr->user->username }}" class="text-decoration-none">{{ $arr->user->name }}</a></p>
                                 <p class="text-muted"> created {{ $arr->created_at->diffForHumans() }}</p>
-                                <a href="/artikel?category={{ $arr->category->slug }}" class="btn btn-outline-primary mb-1">+ {{ $arr->category->name }}</a>
+                                <a href="/artikel?category={{ $arr->category->slug }}" class="btn text-white mb-1">+ {{ $arr->category->name }}</a>
                             </div>
                         </div>
                     </div>
@@ -78,11 +78,11 @@
         </div>
 
     @else
-        <h1 class="display-1 text-center mt-5 p-5">Tidak ada Artikel</h1>
+        <h1 class="display-1 text-center mt-5 p-5">Tidak ada Artikel!!!!11!</h1>
     @endif
 
     <div class="d-flex justify-content-center">
         {{ $artikel->links() }}
     </div>
-
+    </div>
 @endsection

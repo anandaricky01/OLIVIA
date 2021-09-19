@@ -25,7 +25,7 @@ use Illuminate\Auth\Events\Registered;
 
 Route::get('/',function(){
     return view('landingPage',[
-        'title'=>'Home',
+        'title'=>'Sampah Juga Berharga',
         'active' => 'home'
     ]);
 });
@@ -37,6 +37,12 @@ Route::get('/about',function(){
     ]);
 });
 
+Route::get('/faq', function(){
+    return view('faq',[
+        'title'=>'faq',
+        'active' => 'faq'
+    ]);
+});
 // artikel
 Route::get('/artikel', [ArtikelController::class,'index']);
 

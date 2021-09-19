@@ -1,0 +1,43 @@
+p,
+h4,
+h3,
+a,
+label {
+  font-family: "Nunito", sans-serif;
+}
+h1,
+h2 {
+  font-family: "Epilogue", sans-serif;
+}
+.btn {
+  border-radius: 50px;
+  background-color: #00b43c;
+  padding: 8px 22px;
+  font-family: "Nunito", sans-serif;
+}
+.btn:hover {
+  background-color: #036451;
+  border: 1px solid #00b43c;
+}
+.form-control {
+  border-radius: 10px;
+}
+.kanan {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.kanan h3 {
+  color: #00b3bc;
+}
+.header {
+  color: #00b3bc;
+}
+
+@media (min-width: 992px) {
+  .kanan {
+    margin-top: 100px;
+  }
+  body {
+    overflow: hidden;
+  }
+}

@@ -1,0 +1,86 @@
+p,
+h4,
+a,
+label {
+  font-family: "Nunito", sans-serif;
+}
+h1,
+h2,
+h3 {
+  font-family: "Epilogue", sans-serif;
+}
+.btn {
+  border-radius: 50px;
+  background-color: #00b43c;
+  padding: 8px 22px;
+  font-family: "Nunito", sans-serif;
+}
+.btn:hover {
+  background-color: #036451;
+  border: 1px solid #00b43c;
+}
+
+.navbar .container .btn {
+  display: flex;
+  justify-content: center;
+}
+.isi {
+  margin-top: 200px;
+}
+
+.cta {
+  background-color: #ebfffe;
+  height: 390px;
+  margin-bottom: 150px;
+}
+.hubungi {
+  margin-top: 120px;
+  margin-bottom: 60px;
+}
+.hubungi h1 {
+  padding-top: 70px;
+}
+
+.email {
+  text-align: center;
+  border: 1px solid #00b3bc;
+  border-radius: 30px;
+  padding: 20px 0px 20px 0px;
+  background-color: white;
+}
+.email p {
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.icon {
+  font-size: 100px;
+  color: #00b3bc;
+}
+#footer {
+  margin-top: 350px;
+}
+
+@media (min-width: 992px) {
+  #footer {
+    margin-top: 0px;
+  }
+  .beranda:hover::after {
+    content: "";
+    display: block;
+    border-bottom: 3px solid #036451;
+    margin-bottom: -3px;
+  }
+  .artikel:hover::after {
+    content: "";
+    display: block;
+    border-bottom: 3px solid #036451;
+    margin-bottom: -3px;
+  }
+  .faq::after {
+    content: "";
+    display: block;
+    border-bottom: 3px solid #00b3bc;
+    margin-bottom: -3px;
+  }
+}
