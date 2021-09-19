@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Models\Role;
 use App\Models\Artikel;
 use Laravel\Sanctum\HasApiTokens;
 use Illuminate\Notifications\Notifiable;
@@ -18,13 +19,16 @@ class User extends Authenticatable
      *
      * @var string[]
      */
-    // protected $fillable = [
-    //     'name',
-    //     'email',
-    //     'password',
-    // ];
+    protected $fillable = [
+        'name',
+        'username',
+        'user_id',
+        'role_id',
+        'email',
+        'password',
+    ];
 
-        protected $guarded = ['id'];
+        // protected $guarded = ['id'];
 
     /**
      * The attributes that should be hidden for serialization.
@@ -47,5 +51,9 @@ class User extends Authenticatable
 
     public function artikel(){
         return $this->hasMany(Artikel::class);
+    }
+
+    public function role(){
+        return $this->belongsTo(Role::class,'role_id');
     }
 }

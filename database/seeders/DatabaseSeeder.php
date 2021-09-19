@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Role;
 use App\Models\User;
 use App\Models\Artikel;
 use App\Models\Category;
@@ -16,6 +17,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+        
         User::factory(10)->create();
         Artikel::factory(50)->create();
 
@@ -43,5 +45,12 @@ class DatabaseSeeder extends Seeder
             'name' => 'Bencana Alam',
             'slug' => 'bencana-alam'
         ]);
+
+        Role::create(['role_name' => 'penyetor']);
+
+        Role::create(['role_name' => 'kurir']);
+
+        Role::create(['role_name' => 'kolega']);
+        
     }
 }
