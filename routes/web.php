@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ArtikelController;
+use App\Http\Controllers\FormController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
 use App\Models\Category;
@@ -29,6 +30,8 @@ Route::get('/',function(){
         'active' => 'home'
     ]);
 });
+
+Route::post('/', [FormController::class, 'send']);
 
 Route::get('/about',function(){
     return view('about',[

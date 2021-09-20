@@ -86,7 +86,6 @@
         </div>
       </div>
     </footer>
-      </footer>
     </div>
   </section>
   <!-- akhir footer -->

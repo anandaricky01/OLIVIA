@@ -44,7 +44,7 @@
 
         </style>
         
-        <title>SAGA | - {{ $title }}</title>
+        <title>SAGA | {{ $title }}</title>
     </head>
     <body class="bg-white">
         

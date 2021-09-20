@@ -199,29 +199,59 @@
       <!-- form -->
       <section id="form">
         <div class="container">
-          <div class="row">
-            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
-              <img src="/img/form.jpg" class="img-fluid" alt="" />
-            </div>
-            <div class="col mt-3">
-              <a style="text-decoration: none"><i class="fas fa-dot-circle me-2" style="color: #00b3bc;"></i>Bagaimana kami bergerak</a>
-              <h1 class="mt-3">Lorem ipsum dolor sit amet.</h1>
-              <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label">Nama Lengkap</label>
-                <input type="name" class="form-control" id="exampleFormControlInput1" />
+          @if (session()->has('success'))
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                <p>{{ session('success') }}</p>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>   
+          @endif
+        </div>
+        <form action="" method="POST">
+          @csrf
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                <img src="/img/form.jpg" class="img-fluid" alt="" />
               </div>
-              <div class="mb-3">
-                <label for="exampleFormControlInput2" class="form-label">Email</label>
-                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" />
+              <div class="col mt-3">
+                <a style="text-decoration: none"><i class="fas fa-dot-circle me-2" style="color: #00b3bc;"></i>Bagaimana kami bergerak</a>
+                <h1 class="mt-3">Lorem ipsum dolor sit amet.</h1>
+                <div class="mb-3">
+                  <label for="nama" class="form-label">Nama Lengkap</label>
+                  <input type="name" class="form-control @error('name') is-invalid @enderror" id="nama" name="nama" required value="{{ old('nama') }}"/>
+                  @error('name')    
+                    <div class="invalid-feedback">
+                      {{ $message }}
+                    </div>
+                  @enderror
+                </div>
+                <div class="mb-3">
+                  <label for="email" class="form-label">Email</label>
+                  <input type="email" class="form-control @error('email') is-invalid @enderror" id="email" placeholder="name@example.com" name="email" required value="{{ old('email') }}"/>
+                  @error('email')    
+                    <div class="invalid-feedback">
+                      {{ $message }}
+                    </div>
+                  @enderror
+                </div>
+                <div class="mb-3">
+                  <label for="deskripsi" class="form-label">Deskripsi</label>
+                  <textarea class="form-control @error('deskripsi') is-invalid @enderror" id="deskripsi" rows="3" placeholder="Tulis komentarmu disini" name="deskripsi" required></textarea>
+                  @error('deskripsi')    
+                    <div class="invalid-feedback">
+                      {{ $message }}
+                    </div>
+                  @enderror
+                </div>
+                <a href="landingPage.blade.php#form">
+                  <button type="submit" class="btn text-white">
+                  Submit
+                  </button>
+                </a>
               </div>
-              <div class="mb-3">
-                <label for="exampleFormControlTextarea1" class="form-label">Deskripsi</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Tulis komentarmu disini"></textarea>
-              </div>
-              <button class="btn text-white">Submit</button>
             </div>
           </div>
-        </div>
+        </form>
       </section>
       <!-- akhir form -->
 @endsection

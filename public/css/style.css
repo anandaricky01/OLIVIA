@@ -204,6 +204,7 @@ p {
         border-bottom: 3px solid #00b3bc;
         margin-bottom: -3px;
     }
+    
     .artikel:hover::after {
         content: "";
         display: block;
