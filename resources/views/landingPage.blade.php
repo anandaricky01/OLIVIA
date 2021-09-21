@@ -206,7 +206,7 @@
             </div>   
           @endif
         </div>
-        <form action="" method="POST">
+        <form action="/#form" method="POST">
           @csrf
           <div class="container">
             <div class="row">
@@ -243,11 +243,9 @@
                     </div>
                   @enderror
                 </div>
-                <a href="landingPage.blade.php#form">
-                  <button type="submit" class="btn text-white">
+                <button type="submit" class="btn text-white">
                   Submit
-                  </button>
-                </a>
+                </button>
               </div>
             </div>
           </div>
