@@ -2,7 +2,7 @@
 
 @section('container')
 
-<div class="row justify-content-center mt-4">
+<div class="row justify-content-center mt-5 pt-5">
     <div class="col-lg-5">
         <main class="form-registration">
 
@@ -45,6 +45,26 @@
                         {{ $message }}
                     </div>
                 @enderror
+              </div>
+              <div id="role" class="mt-3">
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="role_id" id="role1" value="1" checked>
+                  <label class="form-check-label" for="role1">
+                    Penyetor
+                  </label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="role_id" id="role2" value="2" >
+                  <label class="form-check-label" for="role2">
+                    Kurir
+                  </label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="role_id" id="role3" value="3" >
+                  <label class="form-check-label" for="role3">
+                    kolega
+                  </label>
+                </div>
               </div>
 
               <button class="w-100 btn btn-lg btn-primary mt-4" type="submit">Daftar</button>

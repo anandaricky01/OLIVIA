@@ -51,6 +51,8 @@ class DatabaseSeeder extends Seeder
         Role::create(['role_name' => 'kurir']);
 
         Role::create(['role_name' => 'kolega']);
+
+        Role::create(['role_name' => 'admin']);
         
     }
 }

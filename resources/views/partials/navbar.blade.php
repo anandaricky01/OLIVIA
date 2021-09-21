@@ -29,7 +29,29 @@
         <a class="nav-link artikel {{ ($active === 'artikel') ? 'active' : '' }}" data-spy="scroll" style="padding-right: 30px" href="/artikel">Artikel</a>
         <a class="nav-link faq {{ ($active === 'faq') ? 'active' : '' }}" data-spy="scroll" style="padding-right: 30px" href="/faq">FAQ</a>
       </div>
-      <a class="btn text-white" href="/login" tabindex="-1" aria-disabled="true">Masuk</a>
+
+      <ul class="navbar-nav ms-auto">
+      @auth
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Welcome back, {{ auth()->user()->name }}!
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="/dashboard"><i class="bi bi-layout-text-sidebar-reverse"></i> My Dashboard</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li>
+              <form action="/logout" method="post">  
+                @csrf
+                <button type="submit" class="dropdown-item"><i class="bi bi-box-arrow-right"></i> Log out </button>
+              </form>
+            </li>
+          </ul>
+        </li>
+      @else 
+        <a class="btn text-white" href="/login" tabindex="-1" aria-disabled="true">Masuk</a>
+      @endauth
+    </ul>
+    
     </div>
   </div>
 </nav>

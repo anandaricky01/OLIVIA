@@ -31,16 +31,45 @@
             <img src="img/masuk.jpg" class="img-fluid" alt="" />
           </div>
           <div class="col-lg-5 col-sm-12 col-md-12 ms-sm-4 ms-md-auto kanan">
+            
+            {{-- alert berhasil daftar --}}
+            @if (session()->has('success'))
+              <div class="alert alert-success alert-dismissible fade show" role="alert">
+                <p>{{ session('success') }}</p>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+              </div>   
+            @endif
+
+            {{-- alert gagal login --}}
+            @if (session()->has('loginError'))
+              <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                <p>{{ session('loginError') }}</p>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+              </div>   
+            @endif
+
+            {{-- form login --}}
             <h3 class="text-center mb-4">Masuk</h3>
-            <form class="border border-info p-3 shadow" style="border-radius: 30px;">
+            <form action="/login" method="POST" class="border border-info p-3 shadow" style="border-radius: 30px;">
+              @csrf
               <div class="container">
                 <div class="mb-3">
-                  <label for="exampleInputEmail" class="form-label">Email</label>
-                  <input type="email" class="form-control" id="exampleInputEmail" aria-describedby="emailHelp">
+                  <label for="email" class="form-label">Email</label>
+                  <input type="email" class="form-control @error('email') is-invalid @enderror" id="email" aria-describedby="emailHelp" name="email" required value="{{ old('email') }}">
+                  @error('email')
+                      <div class="invalid-feedback">
+                        {{ $message }}
+                      </div>
+                  @enderror
                 </div>
                 <div class="mb-3">
-                  <label for="exampleInputPassword" class="form-label">Kata sandi</label>
-                  <input type="password" class="form-control" id="exampleInputPassword">
+                  <label for="password" class="form-label">Kata sandi</label>
+                  <input type="password" class="form-control @error('password') is-invalid @enderror" id="password" required name="password">
+                  @error('password')
+                      <div class="invalid-feedback">
+                        {{ $message }}
+                      </div>
+                  @enderror
                 </div>
                 <div class="mb-3 form-check">
                   <input type="checkbox" class="form-check-input" id="exampleCheck1">
