@@ -42,4 +42,10 @@ class Artikel extends Model
     public function category(){
         return $this->belongsTo(Category::class);
     }
+
+    // ini agar jika ada yang mencari data tentang post akan selalu dihubungkan dengan slug, bukan id
+    public function getRouteKeyName()
+    {
+        return 'slug';
+    }
 }

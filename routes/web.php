@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ArtikelController;
-use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\DashboardArtikelController;
 use App\Http\Controllers\FormController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
@@ -61,4 +61,8 @@ Route::get('/register', [RegisterController::class, 'index'])->middleware('guest
 Route::post('/register', [RegisterController::class, 'store']);
 
 // dashboard
-Route::get('/dashboard', [DashboardController::class, 'index'])->middleware('auth');
+Route::get('/dashboard', function(){
+    return view('/dashboard/index');
+})->middleware('auth');
+
+Route::resource('/dashboard/artikel', DashboardArtikelController::class);

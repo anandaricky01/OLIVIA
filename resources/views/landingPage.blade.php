@@ -118,7 +118,7 @@
               <div class="card shadow" style="background-color: #cef2eb">
                 <img src="/img/card-1.png" class="card-img-top" alt="" />
                 <div class="card-body">
-                  <h2>Setor</h2>
+                  <h2 class="text-center">Setor</h2>
                   <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                   <a href="#" class="btn text-light">Gabung</a>
                 </div>
@@ -128,7 +128,7 @@
               <div class="card shadow">
                 <img src="/img/card-2.png" class="card-img-top" alt="" />
                 <div class="card-body">
-                  <h2>Kurir</h2>
+                  <h2 class="text-center">Kurir</h2>
                   <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                   <a href="#" class="btn text-light">Gabung</a>
                 </div>
@@ -138,7 +138,7 @@
               <div class="card shadow" style="background-color: #cef2eb">
                 <img src="/img/card-3.png" class="card-img-top" alt="" />
                 <div class="card-body">
-                  <h2>kolega</h2>
+                  <h2 class="text-center">kolega</h2>
                   <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                   <a href="#" class="btn text-light">Gabung</a>
                 </div>

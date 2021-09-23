@@ -1,7 +1,7 @@
 @extends('layouts/layoutMain')
 
 @section('container')
-    <div class="container">
+    <div class="container mt-5 pt-5">
         <h1 class="mb-4 mt-3 text-center">{{ $title }}</h1>
     </div>
 
