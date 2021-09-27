@@ -1,0 +1,78 @@
+p,
+h5,
+h3,
+a,
+label {
+  font-family: "Nunito", sans-serif;
+}
+h1,
+h2 {
+  font-family: "Epilogue", sans-serif;
+}
+#loading {
+  width: 100%;
+  height: 100vh;
+  background: #fff url(/img/loader.gif) no-repeat center;
+  position: fixed;
+  z-index: 999;
+}
+.radio {
+  border: solid 1px #00b3bc;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 20px 3px 15px 3px;
+}
+.radio:hover {
+  background-color: #00b3bc;
+}
+/* .setor {
+  margin-right: 12px;
+}
+.kurir {
+  margin-right: 12px;
+} */
+.btn {
+  border-radius: 50px;
+  background-color: #00b43c;
+  padding: 8px 22px;
+  font-family: "Nunito", sans-serif;
+}
+.btn:hover {
+  background-color: #036451;
+  border: 1px solid #00b43c;
+}
+body {
+  margin-top: 50px;
+}
+/* body {
+  background-image: url(img/daftar1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-y: 350px;
+  background-position-x: -300px;
+} */
+.kanan {
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
+a {
+  color: #036451;
+}
+.header {
+  color: #00b3bc;
+}
+@media (min-width: 992px) {
+  /* body {
+    background-image: url(img/daftar1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: 0px;
+    background-position-x: 0px;
+  } */
+  .kanan {
+    margin-top: 50px;
+  }
+  body {
+    overflow: hidden;
+  }
+}

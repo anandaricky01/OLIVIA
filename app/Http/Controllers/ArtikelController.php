@@ -19,7 +19,7 @@ class ArtikelController extends Controller
         }
 
         if(request('user')){
-            $user = User::firstWhere('username', request('user'));
+            $user = User::firstWhere('name', request('user'));
             $title = ' by ' . $user->name;
         }
 

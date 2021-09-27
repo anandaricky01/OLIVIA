@@ -47,7 +47,7 @@
                 <h3 class="card-title">{{ $artikel[0]->title }}</h3>
                 <p>
                     <small class="text-muted">
-                        By : <a href="/artikel?user={{ $artikel[0]->user->username }}" class="text-decoration-none">{{ $artikel[0]->user->name }}</a> in <a href="/artikel?category={{ $artikel[0]->category->slug }}" class="text-decoration-none">{{ $artikel[0]->category->name }}</a> {{ $artikel[0]->created_at->diffForHumans() }}
+                        By : <a href="/artikel?user={{ $artikel[0]->user->name }}" class="text-decoration-none">{{ $artikel[0]->user->name }}</a> in <a href="/artikel?category={{ $artikel[0]->category->slug }}" class="text-decoration-none">{{ $artikel[0]->category->name }}</a> {{ $artikel[0]->created_at->diffForHumans() }}
                     </small>
                 </p>
                 <a href="/artikel?category={{ $artikel[0]->category->slug }}" class="btn mb-1 text-white">+ {{ $artikel[0]->category->name }}</a>
@@ -67,7 +67,7 @@
                             <a href="/artikel/{{ $arr->slug }}"><img src="https://source.unsplash.com/500x400?{{ $arr->category->name }}" class="card-img-top" alt="..."></a>
                             <div class="card-body">
                                 <h5 class="card-title">{{ $arr->title }}</h5>
-                                <p class="card-text text-muted">post by : <a href="/artikel?user={{ $arr->user->username }}" class="text-decoration-none">{{ $arr->user->name }}</a></p>
+                                <p class="card-text text-muted">post by : <a href="/artikel?user={{ $arr->user->name }}" class="text-decoration-none">{{ $arr->user->name }}</a></p>
                                 <p class="text-muted"> created {{ $arr->created_at->diffForHumans() }}</p>
                                 <a href="/artikel?category={{ $arr->category->slug }}" class="btn text-white mb-1">+ {{ $arr->category->name }}</a>
                             </div>

@@ -18,7 +18,7 @@ class Artikel extends Model
 
         $query->when($filters['search'] ?? false, fn($query, $search)=>
             $query->where('title', 'like', '%' . $search . '%')->
-            orWhere('body', 'like', '%' . $search . '%')    
+            orWhere('body', 'like', '%' . $search . '%')
         );
         
         $query->when($filters['category'] ?? false, fn($query, $category)=>
@@ -29,7 +29,7 @@ class Artikel extends Model
         
         $query->when($filters['user'] ?? false, fn($query, $user)=>
             $query->whereHas('user', fn($query)=>
-            $query->where('username', $user)
+            $query->where('name', $user)
             )
         );
 

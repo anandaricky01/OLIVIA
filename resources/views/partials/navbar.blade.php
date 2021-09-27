@@ -10,24 +10,24 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarScroll">
       <div class="navbar-nav mx-auto">
-        <a class="nav-link beranda {{ ($active === 'home') ? 'active' : '' }}" data-spy="scroll" style="padding-right: 30px" href="/">Beranda</a>
+        <a class="nav-link beranda {{ Request::is('') ? 'active' : '' }}" data-spy="scroll" style="padding-right: 30px" href="/">Beranda</a>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle {{ ($active === 'about') ? 'active' : '' }}" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false" style="padding-right: 30px">Tentang Kami</a>
+          <a class="nav-link dropdown-toggle {{ Request::is('about') ? 'active' : '' }}" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false" style="padding-right: 30px">Tentang Kami</a>
           <ul class="dropdown-menu" style="background-color: #00b3bc">
             <li><a class="dropdown-item" href="/about">Tentang SAGA</a></li>
             <li><a class="dropdown-item" href="/about">Tentang Tim</a></li>
           </ul>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle {{ ($active === 'layanan') ? 'active' : '' }}" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false" style="padding-right: 30px">Layanan</a>
+          <a class="nav-link dropdown-toggle {{ Request::is('') ? 'active' : '' }}" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false" style="padding-right: 30px">Layanan</a>
           <ul class="dropdown-menu" style="background-color: #00b3bc">
             <li><a class="dropdown-item" href="#">Layanan Setor</a></li>
             <li><a class="dropdown-item" href="#">Layanan Kurir</a></li>
             <li><a class="dropdown-item" href="#">Layanan Mitra</a></li>
           </ul>
         </li>
-        <a class="nav-link artikel {{ ($active === 'artikel') ? 'active' : '' }}" data-spy="scroll" style="padding-right: 30px" href="/artikel">Artikel</a>
-        <a class="nav-link faq {{ ($active === 'faq') ? 'active' : '' }}" data-spy="scroll" style="padding-right: 30px" href="/faq">FAQ</a>
+        <a class="nav-link artikel {{ Request::is('artikel') ? 'active' : '' }}" data-spy="scroll" style="padding-right: 30px" href="/artikel">Artikel</a>
+        <a class="nav-link faq {{ Request::is('faq') ? 'active' : '' }}" data-spy="scroll" style="padding-right: 30px" href="/faq">FAQ</a>
       </div>
 
       <ul class="navbar-nav ms-auto">
