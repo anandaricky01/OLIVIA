@@ -2,234 +2,18 @@ p,
 h4,
 a,
 label {
-    font-family: "Nunito", sans-serif;
-}
-h1,
-h2 {
-    font-family: "Epilogue", sans-serif;
-}
-.btn {
-    border-radius: 50px;
-    background-color: #00b43c;
-    padding: 8px 22px;
-    font-family: "Nunito", sans-serif;
-}
-.btn:hover {
-    background-color: #036451;
-    border: 1px solid #00b43c;
-}
-
-.navbar .container .btn {
-    display: flex;
-    justify-content: center;
-}
-.navbar .container a {
-    font-family: "Nunito", sans-serif;
-}
-.jumbotron {
-    margin-top: 80px;
-}
-p {
-    text-align: justify;
-    font-family: "Nunito", sans-serif;
-}
-.jumbotron .btn {
-    padding: 8px 15px;
-    font-size: 10px;
-}
-.search-input:focus {
-    outline: none;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-}
-
-.info-panel {
-    background-color: #00b3bc;
-    border-radius: 35px;
-    padding: 0px 10px;
-    /* position: relative; */
-    display: flex;
-    align-items: center;
-}
-.testimoni {
-    margin-bottom: 20px;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.testimoni .keterangan {
-    color: white;
-    font-family: "Nunito", sans-serif;
-}
-.counter-up::before {
-    height: 100%;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.8);
-}
-.counter-up .content {
-    display: flex;
-    width: 100%;
-    height: 100%;
-    flex-wrap: wrap;
-    justify-content: start;
-}
-.counter-up .content .box {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    margin: 0px 10px;
-}
-
-.content .box .icon {
-    font-size: 20px;
-    text-align: center;
-    color: #ffff;
-    font-family: "Nunito", sans-serif;
-}
-.content .box .counter {
-    font-size: 50px;
-    font-weight: 500;
-    color: #f2f2f2;
-    font-family: "Nunito", sans-serif;
-}
-.content .box .text {
-    font-weight: 400;
-    color: #fff;
-    text-align: center;
-    font-family: "Nunito", sans-serif;
-}
-
-#kenalin {
-    padding-top: 200px;
-    justify-content: center;
-    text-align: center;
-    background-color: #ebfffe;
-    z-index: -2886;
-    height: 900px;
-}
-#kenalin .btn {
-    margin-top: 30px;
-}
-
-#layanan {
-    margin-top: -400px;
-}
-#layanan .card {
-    padding: 30px 20px 0px 20px;
-    border-radius: 30px;
-}
-#second-cta {
-    margin-top: 100px;
-    background-color: #cef2eb;
-    border-radius: 50px;
-    padding: 50px;
-}
-
-#form {
-    margin-top: 200px;
-    margin-bottom: 100px;
-}
-@media screen and (max-width: 1036px) {
-    .counter-up {
-        padding: 50px 50px 0 50px;
-    }
-    .counter-up .content .box {
-        width: calc(50% - 30px);
-    }
-}
-@media screen and (max-width: 580px) {
-    .counter-up .content .box {
-        width: 100%;
-    }
-}
-@media screen and (max-width: 500px) {
-    .wrapper {
-        padding: 20px;
-    }
-    .counter-up {
-        padding: 30px 20px 0 20px;
-    }
-}
-/* desktop */
-
-@media (min-width: 992px) {
-    .navbar .container .btn {
-        padding-left: 22px;
-    }
-    .jumbotron {
-        margin-top: 0px;
-        height: 937px;
-        background-image: url(/img/1.jpg);
-        background-size: cover;
-        background-position-y: -20px;
-    }
-    .jumbotron .konten {
-        margin-top: 250px;
-    }
-    .jumbotron .btn {
-        padding: 8px 22px;
-        font-size: unset;
-    }
-    .info-panel {
-        margin-top: -150px;
-    }
-    .input-group input {
-        border-radius: 30px;
-        height: 40px;
-        margin-top: 0px;
-    }
-    .input-group button {
-        border-radius: 30px;
-        margin-top: 0;
-    }
-    .content {
-        border-right: 5px white solid;
-    }
-    #layanan .card {
-        width: 350px;
-        height: 520px;
-        padding-right: 0px;
-    }
-    #layanan .row {
-        margin-left: 23px;
-        margin-bottom: 120px;
-    }
-
-    .active {
-        content: "";
-        display: block;
-        border-bottom: 3px solid #00b3bc;
-        margin-bottom: -3px;
-    }
-    
-    .artikel:hover::after {
-        content: "";
-        display: block;
-        border-bottom: 3px solid #036451;
-        margin-bottom: -3px;
-    }
-    .faq:hover::after {
-        content: "";
-        display: block;
-        border-bottom: 3px solid #036451;
-        margin-bottom: -3px;
-    }
-}
-
-/* faq */
-p,
-h4,
-a,
-label {
   font-family: "Nunito", sans-serif;
 }
 h1,
-h2,
-h3 {
+h2 {
   font-family: "Epilogue", sans-serif;
+}
+#loading {
+  width: 100%;
+  height: 100vh;
+  background: #fff url(/img/loader.gif) no-repeat center;
+  position: fixed;
+  z-index: 999;
 }
 .btn {
   border-radius: 50px;
@@ -246,61 +30,239 @@ h3 {
   display: flex;
   justify-content: center;
 }
-.isi {
-  margin-top: 200px;
+.navbar .container a {
+  font-family: "Nunito", sans-serif;
+}
+.jumbotron {
+  margin-top: 80px;
 }
 
-.cta {
-  background-color: #ebfffe;
-  height: 390px;
-  margin-bottom: 150px;
+.jumbotron .konten p {
+  text-align: none;
 }
-.hubungi {
-  margin-top: 120px;
-  margin-bottom: 60px;
+.jumbotron .btn {
+  padding: 8px 15px;
+  font-size: 10px;
 }
-.hubungi h1 {
-  padding-top: 70px;
+.search-input:focus {
+  outline: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
 }
 
-.email {
+.info-panel {
+  background-color: #00b3bc;
+  border-radius: 35px;
+  padding: 0px 10px;
+  /* position: relative; */
+  display: flex;
+  align-items: center;
+}
+.testimoni {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.testimoni .keterangan {
+  color: white;
+  font-family: "Nunito", sans-serif;
+}
+.counter-up::before {
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+}
+.counter-up .content {
+  margin-right: 10px;
+}
+.counter-up .content .box {
+  padding: 20px 0 0 0;
+}
+
+.content .box .icon {
+  font-size: 17px;
+  font-weight: bolder;
   text-align: center;
-  border: 1px solid #00b3bc;
-  border-radius: 30px;
-  padding: 20px 0px 20px 0px;
-  background-color: white;
+  color: #ffff;
+  font-family: "Nunito", sans-serif;
 }
-.email p {
-  font-size: 20px;
-  margin-top: 10px;
+.content .box .counter {
+  font-size: 50px;
+  text-align: center;
+  color: #f2f2f2;
+  font-family: "Nunito", sans-serif;
+}
+.content .box .text {
+  font-weight: 400;
+  color: #fff;
+  text-align: center;
+  font-family: "Nunito", sans-serif;
 }
 
-.icon {
-  font-size: 100px;
+#kenalin {
+  padding-top: 150px;
+  justify-content: center;
+  text-align: center;
+  background-color: #ebfffe;
+  z-index: -2886;
+  height: 830px;
+}
+#kenalin .btn {
+  margin-top: 30px;
+}
+
+#layanan {
+  margin-top: -400px;
+}
+#layanan .card {
+  padding: 30px 20px 20px 20px;
+  border-radius: 30px;
+  transition: 1s;
+}
+#layanan .card:hover {
+  transform: scale(1.2);
+}
+#layanan .card .card-body {
+  padding-left: 0px;
+}
+#layanan .card .card-body .popup .overlay {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+  display: none;
+}
+#layanan .card .card-body .popup .konten {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  background: #fff;
+  width: 450px;
+  height: 220px;
+  z-index: 2;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+#layanan .card .card-body .popup .close-btn {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  width: 30px;
+  height: 30px;
+  background: #222;
+  color: #fff;
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 50%;
+}
+#layanan .card .card-body .popup.active .overlay {
+  display: block;
+}
+#layanan .card .card-body .popup.active .konten {
+  transition: all 300ms ease-in-out;
+  transform: translate(-50%, -50%) scale(1);
+}
+.fakta p {
+  text-align: left;
+}
+#second-cta {
+  margin-top: 100px;
+  background-color: #00b3bc;
+  border-radius: 50px;
+  padding: 30px 30px 20px 30px;
+}
+
+#form {
+  margin-top: 200px;
+  margin-bottom: 100px;
+}
+.sitemap a {
+  color: #000;
+}
+.sitemap a:hover {
   color: #00b3bc;
 }
-#footer {
-  margin-top: 350px;
-}
+
+/* desktop */
 
 @media (min-width: 992px) {
-  #footer {
+  .navbar .container .btn {
+    padding-left: 22px;
+  }
+  .jumbotron {
+    margin-top: 0px;
+    height: 937px;
+    background-image: url(/img/beranda/1.jpg);
+    background-size: cover;
+    background-position-y: -150px;
+  }
+  .jumbotron .konten {
+    margin-top: 100px;
+  }
+  .jumbotron .btn {
+    padding: 8px 22px;
+    font-size: unset;
+  }
+  .info-panel {
+    margin-top: -150px;
+  }
+  .input-group input {
+    border-radius: 30px;
+    height: 40px;
     margin-top: 0px;
   }
-
-  .beranda:hover::after {
+  .input-group button {
+    border-radius: 30px;
+    margin-top: 0;
+  }
+  .content {
+    border-right: 5px white solid;
+  }
+  .counter-up .content .box {
+    padding: 0px 10px;
+  }
+  #layanan .card {
+    /* width: 350px; */
+    /* height: 520px; */
+    padding-right: 0px;
+  }
+  #layanan .row {
+    /* margin-left: 23px; */
+    margin-bottom: 120px;
+  }
+  #second-cta .kiri {
+    padding-left: 60px;
+  }
+  .beranda::after {
     content: "";
     display: block;
-    border-bottom: 3px solid #036451;
+    border-bottom: 3px solid #00b3bc;
     margin-bottom: -3px;
-}
+  }
   .artikel:hover::after {
     content: "";
     display: block;
     border-bottom: 3px solid #036451;
     margin-bottom: -3px;
   }
-  
+  .faq:hover::after {
+    content: "";
+    display: block;
+    border-bottom: 3px solid #036451;
+    margin-bottom: -3px;
+  }
 }
 
-
+@media (min-width: 1440px) {
+  .info-panel {
+    margin-top: -200px;
+  }
+}

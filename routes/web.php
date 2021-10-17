@@ -6,7 +6,9 @@ use App\Http\Controllers\DashboardArtikelController;
 use App\Http\Controllers\FormController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\RiwayatKuponController;
 use App\Models\Category;
+use App\Models\RiwayatKupon;
 use App\Models\User;
 use Illuminate\Auth\Events\Registered;
 
@@ -25,14 +27,14 @@ use Illuminate\Auth\Events\Registered;
 //     return view('welcome');
 // });
 
-Route::get('/',function(){
+Route::get('/beranda',function(){
     return view('landingPage',[
         'title'=>'Sampah Juga Berharga',
         'active' => 'home'
     ]);
 });
 
-Route::post('/', [FormController::class, 'send']);
+Route::post('/beranda', [FormController::class, 'send']);
 
 Route::get('/about',function(){
     return view('about',[
@@ -65,4 +67,7 @@ Route::get('/dashboard', function(){
     return view('/dashboard/index');
 })->middleware('auth');
 
+Route::get('/dashboard/riwayat-kupon', [RiwayatKuponController::class, 'index'])->middleware('auth');
+
 Route::resource('/dashboard/artikel', DashboardArtikelController::class);
+

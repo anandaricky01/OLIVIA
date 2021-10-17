@@ -1,0 +1,142 @@
+p,
+h4,
+a,
+label {
+  font-family: "Nunito", sans-serif;
+}
+h1,
+h2,
+h3 {
+  font-family: "Epilogue", sans-serif;
+}
+.btn {
+  border-radius: 50px;
+  background-color: #00b43c;
+  padding: 8px 22px;
+  font-family: "Nunito", sans-serif;
+}
+.btn:hover {
+  background-color: #036451;
+  border: 1px solid #00b43c;
+}
+
+.navbar .container .btn {
+  display: flex;
+  justify-content: center;
+}
+
+.konten {
+  background-image: url(/img/artikelview/artikel-view.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: -1000px;
+  background-position-x: -900px;
+}
+
+.header {
+  margin-top: 150px;
+}
+.kategori {
+  width: 150px;
+  height: 40px;
+  line-height: 40px;
+  margin: 0px auto;
+  background-color: #00b3bc34;
+  border-radius: 50px;
+  margin-bottom: 20px;
+}
+.gambar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+.isi {
+  margin-top: 10px;
+}
+.isi .sumber {
+  font-weight: 600;
+}
+.isi .unduh {
+  margin: 0px auto;
+  text-align: center;
+}
+.icon {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #00b3bc;
+  border-radius: 30px;
+  margin: 0 8px;
+  background-color: white;
+}
+.icon:hover {
+  background-color: #00b3bc;
+}
+.icon i {
+  color: #00b3bc;
+  font-size: 20px;
+  padding: 5px 5px 5px 4px;
+}
+.icon i:hover {
+  color: #fff;
+}
+.artikel-lain {
+  background-color: #ebfffe;
+  margin-top: 60px;
+  padding-bottom: 100px;
+  padding-top: 60px;
+}
+.tanggal {
+  opacity: 60%;
+}
+.card {
+  padding: 0px;
+  border-radius: 30px;
+}
+.card button {
+  border: none;
+  background-color: white;
+  padding: 10px 10px;
+  border-radius: 30px;
+}
+.card button:hover {
+  background-color: #00b3bc;
+}
+.card button img {
+  border-radius: 30px;
+}
+.card button .tanggal {
+  margin-top: 10px;
+}
+.card button h3 {
+  margin-bottom: 30px;
+  color: black;
+}
+
+@media (min-width: 992px) {
+  .konten {
+    background-image: url(img/artikelview/artikel-view.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: -400px;
+    background-position-x: -300px;
+  }
+  .beranda:hover::after {
+    content: "";
+    display: block;
+    border-bottom: 3px solid #036451;
+    margin-bottom: -3px;
+  }
+  .artikel::after {
+    content: "";
+    display: block;
+    border-bottom: 3px solid #00b3bc;
+    margin-bottom: -3px;
+  }
+  .faq:hover::after {
+    content: "";
+    display: block;
+    border-bottom: 3px solid #036451;
+    margin-bottom: -3px;
+  }
+}

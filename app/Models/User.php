@@ -55,4 +55,20 @@ class User extends Authenticatable
     public function role(){
         return $this->belongsTo(Role::class,'role_id');
     }
+
+    public function poin(){
+        return $this->belongsTo(JumlahPoin::class);
+    }
+
+    public function riwayatPoin(){
+        return $this->hasMany(RiwayatPoin::class);
+    }
+
+    public function riwayatKupon(){
+        return $this->hasMany(RiwayatKupon::class);
+    }
+
+    public function riwayatAntar(){
+        return $this->hasMany(RiwayatAntar::class);
+    }
 }

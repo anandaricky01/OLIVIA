@@ -1,0 +1,117 @@
+p,
+h4,
+a,
+label {
+  font-family: "Nunito", sans-serif;
+}
+h1,
+h2,
+h3 {
+  font-family: "Epilogue", sans-serif;
+}
+.btn {
+  border-radius: 50px;
+  background-color: #00b43c;
+  padding: 8px 22px;
+  font-family: "Nunito", sans-serif;
+}
+.btn:hover {
+  background-color: #036451;
+  border: 1px solid #00b43c;
+}
+
+.navbar .container .btn {
+  display: flex;
+  justify-content: center;
+}
+.header {
+  background-image: url(img/bg-artikel2.jpg);
+  height: 170vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: -160px;
+  background-position-x: -100px;
+}
+.quotes {
+  margin-top: -100px;
+  margin-bottom: 60px;
+}
+.highlight {
+  border: solid 1px #00b3bc;
+  background-color: #fff;
+  border-radius: 30px;
+  padding: 20px;
+  width: 70%;
+  margin-bottom: 50px;
+}
+.kenalin {
+  margin-top: 450px;
+}
+.kenalin .input-group {
+  width: 40%;
+  margin: 20px auto;
+}
+.search-input:focus {
+  outline: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.kategori {
+  margin-top: 70px;
+}
+.kategori .btn2 {
+  background-color: #fff;
+  border: 1px solid #00b3bc;
+  color: #00b3bc;
+}
+.kategori .btn2:hover {
+  background-color: #b7f4f1;
+  border: 1px solid #00b3bc;
+  color: #00b3bc;
+}
+.kategori .btn2:focus {
+  outline: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  background-color: #00b3bc;
+  border: 1px solid #00b3bc;
+  color: #fff;
+}
+.tanggal {
+  opacity: 60%;
+}
+
+.ops {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+@media (min-width: 992px) {
+  .quotes {
+    margin-top: -450px;
+    margin-bottom: 60px;
+  }
+  .kategori .btn2 {
+    background-color: #fff;
+    border: 1px solid #00b3bc;
+    color: #00b3bc;
+    font-size: unset;
+  }
+  .beranda:hover::after {
+    content: "";
+    display: block;
+    border-bottom: 3px solid #036451;
+    margin-bottom: -3px;
+  }
+  .artikel::after {
+    content: "";
+    display: block;
+    border-bottom: 3px solid #00b3bc;
+    margin-bottom: -3px;
+  }
+  .faq:hover::after {
+    content: "";
+    display: block;
+    border-bottom: 3px solid #036451;
+    margin-bottom: -3px;
+  }
+}

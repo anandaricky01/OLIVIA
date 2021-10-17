@@ -36,5 +36,8 @@
           @endforeach
       </tbody>
     </table>
+    <div class="d-flex justify-content-center">
+      {{ $artikel->links() }}
+    </div>
   </div>
 @endsection

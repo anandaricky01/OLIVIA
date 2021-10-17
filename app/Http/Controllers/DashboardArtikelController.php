@@ -15,7 +15,7 @@ class DashboardArtikelController extends Controller
     public function index()
     {
         return view('/dashboard/artikel/index',[
-            'artikel' => Artikel::where('user_id', auth()->user()->id)->get()
+            'artikel' => Artikel::latest()->paginate(15)->withQueryString()
         ]);
         
     }

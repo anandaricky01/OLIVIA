@@ -7,7 +7,13 @@
             Dashboard
           </a>
         </li>
-        @if (auth()->user()->role_id == 4)
+        <li class="nav-item">
+          <a class="nav-link {{ Request::is('dashboard/riwayat-kupon') ? 'active' : '' }}" aria-current="page" href="/dashboard/riwayat-kupon">
+            <span data-feather="home"></span>
+            Riwayat Kupon
+          </a>
+        </li>
+        @if (auth()->user()->role_id == 2)
         <li class="nav-item">
           <a class="nav-link {{ Request::is('dashboard/artikel') ? 'active' : '' }}" href="/dashboard/artikel">
             <span data-feather="file-text"></span>
