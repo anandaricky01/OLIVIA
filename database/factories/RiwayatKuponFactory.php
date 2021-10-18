@@ -23,7 +23,7 @@ class RiwayatKuponFactory extends Factory
     public function definition()
     {
         return [
-            'kode' => Str::random(5),
+            'kode' => Str::random(10),
             'kupon_id' => mt_rand(1,4),
             'user_id' => mt_rand(1,10)
         ];

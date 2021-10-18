@@ -26,6 +26,9 @@ h2 {
   background-color: #036451;
   border: 1px solid #00b43c;
 }
+body {
+  margin-top: 40px;
+}
 .form-control {
   border-radius: 10px;
 }
@@ -42,13 +45,25 @@ h2 {
 a {
   color: #036451;
 }
-
+.masuk .gambar {
+  z-index: -22;
+  margin-bottom: -1400px;
+}
+.masuk {
+  padding-bottom: 200px;
+}
 @media (min-width: 992px) {
   .kanan {
-    margin-top: 100px;
+    margin-top: 60px;
   }
   body {
     overflow: hidden;
     margin-top: 80px;
+  }
+  .masuk .gambar {
+    margin-bottom: unset;
+  }
+  .masuk {
+    padding-bottom: 0px;
   }
 }

@@ -15,8 +15,9 @@ class CreateRiwayatPoinsTable extends Migration
     {
         Schema::create('riwayat_poins', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('poin_id');
+            $table->foreignId('user_id');
             $table->integer('pengeluaran');
+            $table->integer('sisa');
             $table->timestamps();
         });
     }

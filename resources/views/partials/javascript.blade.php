@@ -89,7 +89,18 @@
 @endif
 
 @if (Request::is('faq'))
+
+  <!-- javasript -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+
+  <!-- AOS -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      once: true, duration: 1300,offset: 100,
+    });
+  </script>
+
 @endif
 
 @if (Request::is('artikel'))

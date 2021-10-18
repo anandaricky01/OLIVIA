@@ -9,7 +9,7 @@ class RiwayatKuponController extends Controller
 {
     public function index(){
         return view('dashboard/kupon/riwayat',[
-            'kupon' => RiwayatKupon::latest()->where('user_id', auth()->user()->id)->paginate(7)->withQueryString(),
+            'kupon' => RiwayatKupon::select("*")->where("user_id", auth()->user()->id)->orderByDesc("created_at")->get(),
             'active' => 'register',
             'title' => 'register'
         ]);

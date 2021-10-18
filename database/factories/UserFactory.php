@@ -27,9 +27,10 @@ class UserFactory extends Factory
             'role_id' => mt_rand(1,2),
             'email' => $this->faker->unique()->safeEmail(),
             'email_verified_at' => now(),
+            'no_hp' => '08' . $this->faker->numerify('##-####-####'),
             'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
             'remember_token' => Str::random(10),
-            'poin_id' => mt_rand(1,10)
+            'poin_id' => NULL
         ];
     }
 

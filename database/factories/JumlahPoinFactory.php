@@ -21,9 +21,6 @@ class JumlahPoinFactory extends Factory
      */
     public function definition()
     {
-        return [
-            'poin' => mt_rand(90,300),
-            'user_id' => mt_rand(1,10)
-        ];
+        return [];
     }
 }

@@ -100,16 +100,16 @@
     @endif
 
     @if (Request::is('faq'))
-          <!-- Required meta tags -->
+      <!-- Required meta tags -->
       <meta charset="utf-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
 
       <!-- Bootstrap CSS -->
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous" />
-      
-      <!-- khusus faq -->
       <link rel="stylesheet" href="/css/faq.css" />
-      <!-- akhir faq -->
+
+      <!-- AOS -->
+      <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
       <!-- counter -->
       <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
@@ -121,7 +121,6 @@
 
       <!-- icon -->
       <script src="https://kit.fontawesome.com/ff889e85ca.js" crossorigin="anonymous"></script>
-
     @endif
         
     <title>SAGA | {{ $title }}</title>

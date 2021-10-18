@@ -24,7 +24,56 @@ class DatabaseSeeder extends Seeder
         User::factory(10)->create();
         Artikel::factory(50)->create();
         RiwayatKupon::factory(50)->create();
-        JumlahPoin::factory(10)->create();
+
+        JumlahPoin::create([
+            'user_id' => 1,
+            'poin' => 100
+        ]);
+
+        JumlahPoin::create([
+            'user_id' => 2,
+            'poin' => 100
+        ]);
+
+        JumlahPoin::create([
+            'user_id' => 3,
+            'poin' => 100
+        ]);
+
+        JumlahPoin::create([
+            'user_id' => 4,
+            'poin' => 100
+        ]);
+
+        JumlahPoin::create([
+            'user_id' => 5,
+            'poin' => 100
+        ]);
+
+        JumlahPoin::create([
+            'user_id' => 6,
+            'poin' => 100
+        ]);
+
+        JumlahPoin::create([
+            'user_id' => 7,
+            'poin' => 100
+        ]);
+
+        JumlahPoin::create([
+            'user_id' => 8,
+            'poin' => 100
+        ]);
+
+        JumlahPoin::create([
+            'user_id' => 9,
+            'poin' => 100
+        ]);
+
+        JumlahPoin::create([
+            'user_id' => 10,
+            'poin' => 100
+        ]);
 
         Category::create([
             'name' => 'Fun Fact',

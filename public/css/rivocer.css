@@ -1,0 +1,133 @@
+p,
+a,
+label {
+  font-family: "Nunito", sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Epilogue", sans-serif;
+}
+.btn {
+  border-radius: 50px;
+  background-color: #00b43c;
+  padding: 8px 22px;
+  font-family: "Nunito", sans-serif;
+}
+.btn:hover {
+  background-color: #036451;
+  border: 1px solid #00b43c;
+}
+
+.navbar .container .btn {
+  display: flex;
+  justify-content: center;
+}
+.navbar .container a {
+  font-family: "Nunito", sans-serif;
+}
+.konten {
+  padding-bottom: 30px;
+}
+.konten .profil {
+  border-radius: 20px;
+  box-shadow: 0 4px 4px 3px rgba(49, 49, 49, 0.178);
+  padding: 20px;
+  background-color: #fff;
+  height: max-content;
+}
+
+.konten .profil .stempel {
+  position: relative;
+  left: -40px;
+  top: 70px;
+}
+.konten .header {
+  border-top: 1px solid #00b3bc;
+  border-bottom: 1px solid #00b3bc;
+  margin-top: 30px;
+  color: #00b3bc;
+}
+.konten .header p {
+  margin-top: 2%;
+}
+.konten .tabel .tabel-kupon {
+  overflow: scroll;
+  height: 60%;
+}
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+.konten .kupon-aktif {
+  background-color: #e4ffed;
+  border: 1px solid #00b43c;
+  border-left: 10px solid #00b43c;
+  border-radius: 0px 15px 15px 0px;
+  padding: 10px 0px;
+  margin-top: 10px;
+  width: 100%;
+}
+.konten .kupon-aktif .medali h4 {
+  margin-top: 10px;
+  margin-left: 10px;
+}
+.konten .kupon-aktif p {
+  margin-top: 16px;
+}
+.konten .kupon-nonaktif .medali h4 {
+  margin-top: 10px;
+  margin-left: 10px;
+}
+.konten .kupon-nonaktif p {
+  margin-top: 16px;
+}
+.konten .kupon-nonaktif {
+  background-color: #fff;
+  border: 1px solid #00b3bc;
+  border-left: 10px solid #00b3bc;
+  border-radius: 0px 15px 15px 0px;
+  padding: 10px 0px;
+  margin-top: 10px;
+  width: 100%;
+}
+#footer {
+  margin-top: -100px;
+}
+.sitemap a {
+  color: #000;
+}
+.sitemap a:hover {
+  color: #00b3bc;
+}
+@media (max-width: 426px) {
+  .konten .header p {
+    font-size: 12px;
+  }
+  .konten button h4,
+  p {
+    font-size: 12px;
+  }
+}
+@media (min-width: 992px) {
+  .navbar .container .btn {
+    padding-left: 22px;
+  }
+  .konten {
+    padding-bottom: 30px;
+    background-image: url(/img/bg-rivocer.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: -280px;
+    background-position-x: -80px;
+  }
+  .konten .profil {
+    margin-top: 120px;
+  }
+  .konten .tabel {
+    margin-right: 50px;
+    padding-bottom: 240px;
+  }
+}

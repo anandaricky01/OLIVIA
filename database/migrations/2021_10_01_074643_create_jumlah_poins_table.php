@@ -15,7 +15,7 @@ class CreateJumlahPoinsTable extends Migration
     {
         Schema::create('jumlah_poins', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id');
+            $table->foreignId('user_id')->unique();
             $table->integer('poin');
             $table->timestamps();
         });

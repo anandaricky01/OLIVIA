@@ -16,7 +16,7 @@ h2 {
   position: fixed;
   z-index: 999;
 }
-.radio {
+/* .radio {
   border: solid 1px #00b3bc;
   padding: 10px;
   border-radius: 10px;
@@ -24,7 +24,7 @@ h2 {
 }
 .radio:hover {
   background-color: #00b3bc;
-}
+} */
 /* .setor {
   margin-right: 12px;
 }
@@ -42,7 +42,7 @@ h2 {
   border: 1px solid #00b43c;
 }
 body {
-  margin-top: 50px;
+  margin-top: 40px;
 }
 /* body {
   background-image: url(img/daftar1.jpg);
@@ -51,6 +51,7 @@ body {
   background-position-y: 350px;
   background-position-x: -300px;
 } */
+
 .kanan {
   margin-top: 40px;
   margin-bottom: 30px;
@@ -60,6 +61,23 @@ a {
 }
 .header {
   color: #00b3bc;
+}
+.daftar .gambar {
+  margin-left: 10px;
+  margin-bottom: -1500px;
+}
+.daftar {
+  padding-bottom: 200px;
+}
+@media (min-width: 460px) {
+  .daftar .gambar {
+    margin-bottom: -1600px;
+  }
+}
+@media (min-width: 768px) {
+  .daftar .gambar {
+    margin-bottom: -1700px;
+  }
 }
 @media (min-width: 992px) {
   /* body {
@@ -74,5 +92,11 @@ a {
   }
   body {
     overflow: hidden;
+  }
+  .daftar {
+    margin-top: 200px;
+  }
+  .daftar .gambar {
+    margin-bottom: unset;
   }
 }

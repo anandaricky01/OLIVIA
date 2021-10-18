@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ArtikelController;
 use App\Http\Controllers\DashboardArtikelController;
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\FormController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
@@ -11,6 +12,7 @@ use App\Models\Category;
 use App\Models\RiwayatKupon;
 use App\Models\User;
 use Illuminate\Auth\Events\Registered;
+use Illuminate\Http\Request;
 
 /*
 |--------------------------------------------------------------------------
@@ -63,11 +65,12 @@ Route::get('/register', [RegisterController::class, 'index'])->middleware('guest
 Route::post('/register', [RegisterController::class, 'store']);
 
 // dashboard
-Route::get('/dashboard', function(){
-    return view('/dashboard/index');
-})->middleware('auth');
+Route::get('/dashboard', [DashboardController::class, 'view'])->middleware('auth');
+
+Route::post('/dashboard/ubahData', [DashboardController::class, 'ubahData']);
+Route::post('/dashboard/claimVoucher', [DashboardController::class, 'claimVoucher']);
 
 Route::get('/dashboard/riwayat-kupon', [RiwayatKuponController::class, 'index'])->middleware('auth');
 
-Route::resource('/dashboard/artikel', DashboardArtikelController::class);
+Route::resource('/dashboard/artikel', DashboardArtikelController::class)->middleware('auth');
 
