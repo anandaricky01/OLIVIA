@@ -1,0 +1,75 @@
+p,
+a,
+label {
+  font-family: "Nunito", sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Epilogue", sans-serif;
+}
+.btn {
+  border-radius: 50px;
+  background-color: #00b43c;
+  padding: 8px 22px;
+  font-family: "Nunito", sans-serif;
+}
+.btn:hover {
+  background-color: #036451;
+  border: 1px solid #00b43c;
+}
+.btn2 {
+  border-radius: 50px;
+  background-color: #00b3bc;
+  padding: 8px 22px;
+  font-family: "Nunito", sans-serif;
+  border: none;
+}
+.btn2:hover {
+  background-color: #8c95a5;
+}
+.navbar .container .btn {
+  display: flex;
+  justify-content: center;
+}
+.isi {
+  margin-top: 70px;
+  margin-bottom: 20px;
+}
+#footer {
+  margin-top: 30px;
+}
+::-webkit-scrollbar {
+  width: 12px;
+}
+::-webkit-scrollbar-track {
+  border-radius: 5px;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.25);
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: #00b3bc;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #036451;
+}
+@media (max-width: 992px) {
+  #footer .logo img {
+    width: 130px;
+    height: 80px;
+  }
+}
+@media (min-width: 992px) {
+  .navbar .container .btn {
+    padding-left: 22px;
+  }
+  #footer .logo img {
+    width: 200px;
+    height: 100px;
+  }
+  #footer {
+    margin-top: 0px;
+  }
+}

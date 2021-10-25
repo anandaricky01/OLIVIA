@@ -2,11 +2,57 @@
 
 @section('container')
     
+@if (session()->has('edit'))
+      <!-- Modal -->
+        <div class="modal hide fade" id="myModalHasil">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-body text-center">
+                <img src="/img/beranda/checked.png" alt="checked">
+                <h3 style="margin-top: 30px;">Data kamu sudah teredit!</h3>
+                <p class="text-center">pastikan data kamu sudah lengkap ya!</p>
+                <button type="button" class="btn text-white" data-bs-dismiss="modal" style="margin-top: 15px;">Oke</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      @endif
 
+@if (session()->has('kurang'))
+      <!-- Modal -->
+        <div class="modal hide fade" id="myModalHasil">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-body text-center">
+                <img src="/img/silang.png" alt="silang">
+                <h3 style="margin-top: 30px;">Wah Poin Kamu Kurang!</h3>
+                <p class="text-center">yuk isi poin kamu dengan setor sampah!</p>
+                <button type="button" class="btn text-white" data-bs-dismiss="modal" style="margin-top: 15px;">Oke</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      @endif
+
+      @if (session()->has('berhasil'))
+      <!-- Modal -->
+        <div class="modal hide fade" id="myModalHasil">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-body text-center">
+                <img src="/img/beranda/checked.png" alt="checked">
+                <h3 style="margin-top: 30px;">Klaim Berhasil!</h3>
+                <p class="text-center">yuk cek voucher kamu!</p>
+                <button type="button" class="btn text-white" data-bs-dismiss="modal" style="margin-top: 15px;">Oke</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      @endif
       <!-- dashboard -->
       <section id="dashboard">
         <div class="title d-flex justify-content-center">
-          <img src="img/hands.png" class="img-fluid" alt="hands">
+          <img src="/img/hands.png" class="img-fluid" alt="hands">
           <h2 class="mt-3 text-center">Hi, this is yourdashboard!</h2>
         </div>
         <div class="container">
@@ -109,7 +155,7 @@
                   <img src="/img/kupon-aktif.png" class="img-fluid" alt="">
                   <div class="poin">
                     <p>Poin</p>
-                    <h4 style="color: #00b43c;">{{ auth()->user()->poin->poin }}</h4>
+                    <h4 style="color: #00b43c;">100</h4>
                   </div>
                 </div>
               </div>
@@ -125,10 +171,23 @@
                   <p style="color: #00b3bc;">Mantab!</p>
                 @endif
               </div>
-              <button class="btn text-light" type="submit">Klaim</button>
+              <button type="button" class="btn text-white" data-bs-toggle="modal" data-bs-target="#klaim">Klaim</button>
             </div>
             <div class="col-12 col-sm-12 col-md-5 col-lg-5">
               <img src="/img/karduser.png" class="img-fluid" alt="">
+            </div>
+          </div>
+          <!-- Modal -->
+          <div class="modal fade" id="klaim" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-body text-center">
+                  <img src="img/beranda/checked.png" alt="checked">
+                  <h3 style="margin-top: 30px;">Apakah kamu yakin?</h3>
+                  <p class="text-center">Dicheck lagi ya! Siapa tau salah klaim</p>
+                  <button type="submit" class="btn text-white" data-bs-dismiss="modal" style="margin-top: 15px;">Oke</button>
+                </div>
+              </div>
             </div>
           </div>
         </form>
@@ -143,7 +202,7 @@
           <div class="header text-center mx-auto">
               <a class="mt-sm-4 mt-md-4 text-center" style="text-decoration: none"><i class="fas fa-dot-circle me-2" style="color: #00b3bc;"></i>Bagaimana kami bergerak</a>
               <h2 class="mt-3">Klaim voucher dan tukarkan sekarang!</h2>
-              <button class="btn text-light mt-3"><a href="kolega.html" style="color: #fff; text-decoration: none;">Kunjungi toko</a></button>
+              <button class="btn text-light mt-3"><a href="/layanan/kolega" style="color: #fff; text-decoration: none;">Kunjungi toko</a></button>
           </div>
         </div>
       </section>

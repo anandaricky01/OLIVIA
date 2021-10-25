@@ -15,7 +15,12 @@ class CreateRiwayatAntarsTable extends Migration
     {
         Schema::create('riwayat_antars', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('Jenisbarang_id');
+            $table->foreignId('user_id');
+            $table->foreignId('jenis_sampah_id');
+            $table->integer('berat');
+            $table->string('alamat');
+            $table->text('alamat_pengiriman');
+            $table->text('deskripsi_alamat');
             $table->timestamps();
         });
     }

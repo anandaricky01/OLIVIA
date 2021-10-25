@@ -17,6 +17,7 @@ class CreateRiwayatKuponsTable extends Migration
             $table->id();
             $table->foreignId('kupon_id');
             $table->foreignId('user_id');
+            $table->foreignId('status_id');
             $table->string('kode')->unique();
             $table->timestamps();
         });

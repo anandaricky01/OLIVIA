@@ -32,7 +32,7 @@ h5 {
   margin-bottom: 50px;
 }
 #dashboard {
-  background-image: url(img/bg-dashboard.png);
+  background-image: url(/img/bg-dashboard.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position-y: -30px;
@@ -113,5 +113,22 @@ h5 {
 @media (min-width: 992px) {
   .navbar .container .btn {
     padding-left: 22px;
+  }
+}
+
+@media (max-width: 992px) {
+  #footer .logo img {
+    width: 130px;
+    height: 80px;
+  }
+}
+
+@media (min-width: 992px) {
+  .navbar .container .btn {
+    padding-left: 22px;
+  }
+  #footer .logo img {
+    width: 200px;
+    height: 100px;
   }
 }

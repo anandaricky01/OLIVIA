@@ -40,46 +40,27 @@
       <!-- akhir konten isi -->
 
       <!-- artikel lain -->
-    <section class="artikel-lain">
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                    <h2>Baca Artikel yang lain yuk!</h2>
-                    <div class="row justify-content-evenly">
-                      <button class="col-lg-3 col-md-3 col-sm-12 col-11 mt-sm-4 mt-4 bg-white shadow ms-lg-2 ms-md-1 ms-sm-1 card">
-                        <a href="#" class="content-card">
-                            <img src="https://source.unsplash.com/random/500x300" class="img-fluid" alt="">
-                            <div class="d-flex justify-content-between align-items-center">
-                              <p class="tanggal">{{ $artikelLain[0]->created_at->diffForHumans() }}</p>
-                              <span href="{{ $artikelLain[0]->category->slug }}" style="border-radius: 4px; background-color: #B7F4F1; padding: 0 10px;height: max-content; width: max-content;">{{ $artikelLain[0]->category->name }}</span>
-                            </div>
-                            <h3>{{ $artikelLain[0]->title }}</h3>
-                        </a>
-                      </button>
-                      <button class="col-lg-3 col-md-3 col-sm-12 col-11 mt-sm-4 mt-4 bg-white shadow ms-lg-2 ms-md-1 ms-sm-1 card">
-                        <a href="#" class="content-card">
-                            <img src="https://source.unsplash.com/random/500x300" class="img-fluid" alt="">
-                            <div class="d-flex justify-content-between align-items-center">
-                              <p class="tanggal">{{ $artikelLain[1]->created_at->diffForHumans() }}</p>
-                              <span href="{{ $artikelLain[1]->category->slug }}" style="border-radius: 4px; background-color: #B7F4F1; padding: 0 10px;height: max-content; width: max-content;">{{ $artikelLain[1]->category->name }}</span>
-                            </div>
-                            <h3>{{ $artikelLain[1]->title }}</h3>
-                        </a>
-                      </button>
-                      <button class="col-lg-3 col-md-3 col-sm-12 col-11 mt-sm-4 mt-4 bg-white shadow ms-lg-2 ms-md-1 ms-sm-1 card">
-                        <a href="#" class="content-card">
-                            <img src="https://source.unsplash.com/random/500x300" class="img-fluid" alt="">
-                            <div class="d-flex justify-content-between align-items-center">
-                              <p class="tanggal">{{ $artikelLain[2]->created_at->diffForHumans() }}</p>
-                              <span href="{{ $artikelLain[2]->category->slug }}" style="border-radius: 4px; background-color: #B7F4F1; padding: 0 10px;height: max-content; width: max-content;">{{ $artikelLain[2]->category->name }}</span>
-                            </div>
-                            <h3>{{ $artikelLain[2]->title }}</h3>
-                        </a>
-                      </button>
-                    </div>
-                </div>
+      @if ($artikelLain->count() > 0)
+        <!-- artikel lain -->
+        <section class="artikel-lain">
+          <div class="container">
+            <div class="row d-flex justify-content-evenly">
+                @foreach ($artikelLain as $art)
+                <button class="col-lg-3 col-md-3 col-sm-12 col-11 mt-sm-4 mt-4 bg-white shadow ms-lg-2 ms-md-1 ms-sm-1 card">
+                    <a href="/artikel/{{ $art->slug }}" class="content-card">
+                        <img src="https://source.unsplash.com/random/500x300" class="img-fluid" alt="">
+                        <div class="d-flex justify-content-between align-items-center">
+                        <p class="tanggal">{{ $art->created_at->diffForHumans() }}</p>
+                        <span href="/artikel?kategori={{ $art->category->slug }}" style="border-radius: 4px; background-color: #B7F4F1; padding: 0 10px;height: max-content; width: max-content;">{{ $art->category->name }}</span>
+                        </div>
+                        <h3>{{ $art->title }}</h3>
+                    </a>
+                </button>
+                @endforeach
             </div>
-        </div>
-    </section>
-    <!-- akhir artikel lain -->
+          </div>
+        </section>
+        <!-- akhir artikel lain -->
+      @endif
+    
 @endsection

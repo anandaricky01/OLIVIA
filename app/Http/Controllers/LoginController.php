@@ -24,7 +24,7 @@ class LoginController extends Controller
 
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
-            return redirect()->intended('/beranda');
+            return redirect()->intended('/');
         }
 
         return back()->with('loginError', 'Maaf Email atau Password anda salah!');
@@ -34,6 +34,6 @@ class LoginController extends Controller
         Auth::logout();
         $request->session()->invalidate();
         $request->session()->regenerateToken();
-        return redirect('/beranda');
+        return redirect('/');
     }
 }

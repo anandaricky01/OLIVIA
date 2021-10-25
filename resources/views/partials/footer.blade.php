@@ -1,55 +1,45 @@
-<section id="footer" style="background-color: #f9f9f9">
+ <!-- footer -->
+ <section id="footer" style="background-color: #f9f9f9">
   <footer class="bg-white pt-5 pb-4">
     <div class="container text-center text-md-start">
       <div class="row text-center text-md-start">
-        <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-          <img src="img/avatar1.png" alt="logo" style="width: 60px; height: 60px; margin-bottom: 20px; float: left;">
-          <h5 class="font-weight-bold">SAGA</h5>
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae possum consectetur soluta error blanditiis doloribus consequuntur.</p>
+        <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3 logo">
+          <img src="/img/logo-footer.svg" alt="logo" style="margin-bottom: 8px;">
         </div>
         <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-          <h5 class="mb-4 font-weight-bold">Beranda</h5>
+          <h5 class="mb-4 font-weight-bold">Halaman</h5>
           <p>
-            <a href="#" class="text-black" style="text-decoration: none">pertama</a>
+            <a href="/beranda" class="text-black" style="text-decoration: none">Beranda</a>
           </p>
           <p>
-            <a href="#" class="text-black" style="text-decoration: none">kedua</a>
+            <a href="/tentang/saga" class="text-black" style="text-decoration: none">Tentang</a>
           </p>
           <p>
-            <a href="#" class="text-black" style="text-decoration: none">ketiga</a>
-          </p>
-          <p>
-            <a href="#" class="text-black" style="text-decoration: none">keempat</a>
+            <a href="/artikel" class="text-black" style="text-decoration: none">Artikel</a>
           </p>
         </div>
         <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
           <h5 class="mb-4 font-weight-bold">Layanan</h5>
           <p>
-            <a href="#" class="text-black" style="text-decoration: none">pertama</a>
+            <a href="/layanan/setor" class="text-black" style="text-decoration: none">Sobat SAGA</a>
           </p>
           <p>
-            <a href="#" class="text-black" style="text-decoration: none">kedua</a>
+            <a href="/layanan/kurir" class="text-black" style="text-decoration: none">Partner SAGA</a>
           </p>
           <p>
-            <a href="#" class="text-black" style="text-decoration: none">ketiga</a>
-          </p>
-          <p>
-            <a href="#" class="text-black" style="text-decoration: none">keempat</a>
+            <a href="/layanan/kolega" class="text-black" style="text-decoration: none">Kolega</a>
           </p>
         </div>
         <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
           <h5 class="mb-4 font-weight-bold">Hubungi Kami</h5>
           <p>
-            <a href="#" class="text-black" style="text-decoration: none">pertama</a>
+            <a href="/tentang/tim" class="text-black" style="text-decoration: none">Tim SAGA</a>
           </p>
           <p>
-            <a href="#" class="text-black" style="text-decoration: none">kedua</a>
+            <a href="/faq" class="text-black" style="text-decoration: none">Bantuan</a>
           </p>
           <p>
-            <a href="#" class="text-black" style="text-decoration: none">ketiga</a>
-          </p>
-          <p>
-            <a href="#" class="text-black" style="text-decoration: none">keempat</a>
+            <a href="/faq" class="text-black" style="text-decoration: none">Kontak</a>
           </p>
         </div>
         <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
@@ -57,7 +47,7 @@
             <h5>Yuk temui kami!</h5>
             <ul class="list-unstyled d-flex">
               <li class="ms-3">
-                <a class="link-dark" href="#"><i class="fab fa-instagram"></i></a>
+                <a class="link-dark" href="https://www.instagram.com/sagavokasiub/"><i class="fab fa-instagram"></i></a>
               </li>
               <li class="ms-3">
                 <a class="link-dark" href="#"><i class="fab fa-twitter"></i></a>
@@ -79,7 +69,7 @@
       <hr class="mb-4" />
       <div class="row col-md-7 col-lg-8">
         <p>
-          Copyright &copy;2021 All right reserved by <a href="#" style="text-decoration: none;"><strong>SAGA</strong></a>
+          Copyright &copy;2021 All right reserved by <a href="/beranda" style="text-decoration: none;"><strong>SAGA</strong></a>
           Vokasi UB.
         </p>
       </div>
@@ -88,3 +78,4 @@
     </footer>
   </div>
 </section>
+<!-- akhir footer -->

@@ -28,7 +28,7 @@ class DashboardController extends Controller
             'alamat' => $request->alamat
         ]);
         // passing data pegawai yang didapat ke view edit.blade.php
-        return redirect('/dashboard');
+        return redirect('/dashboard')->with('edit','data kamu berhasil diedit');
     
     }
 
@@ -37,30 +37,32 @@ class DashboardController extends Controller
         $poin = $request->poin;
         $poinKupon = $request->poinKupon;
         $kuponId = $request->kuponId;
+
         if ($poin < $poinKupon) {
-            redirect('/dashboard')->with('gagal', 'kupon kamu kurang!');
-        } 
+            return redirect('/dashboard')->with('kurang', 'poin kamu kurang nih!');
+        } else {
 
-        $poinSekarang = $poin - $poinKupon;
+            $poinSekarang = $poin - $poinKupon;
 
-        $updatePoin = DB::table('jumlah_poins')->where('user_id',auth()->user()->id)->update([
-            'poin' => $poinSekarang
-        ]);
+            $updatePoin = DB::table('jumlah_poins')->where('user_id',auth()->user()->id)->update([
+                'poin' => $poinSekarang
+            ]);
 
-        $updateRiwayatPoin = RiwayatPoin::create([
-            'user_id' => auth()->user()->id,
-            'pengeluaran' => $poinKupon,
-            'sisa' => $poin
-        ]);
+            $updateRiwayatPoin = RiwayatPoin::create([
+                'user_id' => auth()->user()->id,
+                'pengeluaran' => $poinKupon,
+                'sisa' => $poinSekarang
+            ]);
 
-        $updateKupon = RiwayatKupon::create([
-            'user_id' => auth()->user()->id,
-            'kupon_id' => $kuponId,
-            'kode' => Str::random(10)
-        ]);
+            $updateKupon = RiwayatKupon::create([
+                'user_id' => auth()->user()->id,
+                'kupon_id' => $kuponId,
+                'kode' => Str::random(10),
+                'status_id' => 1
+            ]);
 
-        return redirect('/dashboard');
+            return redirect('/dashboard')->with('berhasil', 'klaim kamu berhasil');
 
-
+        }
     }
 }

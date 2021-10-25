@@ -15,17 +15,20 @@
               <div class="d-flex flex-row bd-highlight mb-3">
                 <button class="btn text-white" type="button">Yuk Mulai</button>
                 <div class="ms-3">
-                  <div class="input-group">
-                    <input
-                      type="text"
-                      class="form-control search-input float-left shadow-sm"
-                      style="border-radius: 30px 0px 0px 30px; height: 43px; border-right: none;font-family: 'Nunito', sans-serif;"
-                      placeholder="  Cari tahu disini..."
-                      aria-label="Cari tahu disini"
-                      aria-describedby="basic-addon1"
-                    />
-                    <button class="input-group-text shadow-sm" style="border-radius: 0px 30px 30px 0px; background-color: white; border-left: none; color: rgb(163, 162, 162)" id="basic-addon1"><i class="fas fa-search"></i></button>
-                  </div>
+                  <form action="/cari">
+                    <div class="input-group">
+                      <input
+                        type="text"
+                        class="form-control search-input float-left shadow-sm"
+                        style="border-radius: 30px 0px 0px 30px; height: 43px; border-right: none;font-family: 'Nunito', sans-serif;"
+                        placeholder="  Cari tahu disini..."
+                        aria-label="Cari tahu disini"
+                        aria-describedby="basic-addon1"
+                        name="search"
+                      />
+                      <button type="submit" class="input-group-text shadow-sm" style="border-radius: 0px 30px 30px 0px; background-color: white; border-left: none; color: rgb(163, 162, 162)" id="basic-addon1"><i class="fas fa-search"></i></button>
+                    </div>
+                  </form>
                 </div>
               </div>
             </div>
@@ -35,13 +38,13 @@
     </div>
     <!-- akhir jumbrotron -->
 
-    @if (session()->has('success'))
+    @if (session()->has('terkirim'))
       <!-- Modal -->
         <div class="modal hide fade" id="myModal">
           <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
               <div class="modal-body text-center">
-                <img src="img/beranda/checked.png" alt="checked">
+                <img src="/img/beranda/checked.png" alt="checked">
                 <h3 style="margin-top: 30px;">Terima Kasih</h3>
                 <p class="text-center">Pesanmu sudah terkirim</p>
                 <button type="button" class="btn text-white" data-bs-dismiss="modal" style="margin-top: 15px;">Oke</button>
@@ -235,7 +238,7 @@
               </div>
               <div class="mb-3">
                 <label for="exampleFormControlInput2" class="form-label">Email</label>
-                <input type="email" class="form-control @error('email') is-invalid @enderror" id="exampleFormControlInput1" placeholder="name@example.com" name="email" value="{{ old("email") }}"/>
+                <input type="email" class="form-control @error('email') is-invalid @enderror" id="exampleFormControlInput1" placeholder="name@gmail.com" name="email" value="{{ old("email") }}"/>
                 @error('email')    
                   <div class="invalid-feedback">
                     {{ $message }}
@@ -253,7 +256,7 @@
               </div>
               <button type="button" class="btn text-white" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Submit</button>
               <!-- Modal -->
-              <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+              <div class="modal fade" id="staticBackdrop" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered">
                   <div class="modal-content">
                     <div class="modal-body text-center">

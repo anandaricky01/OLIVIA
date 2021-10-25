@@ -24,8 +24,9 @@ class RiwayatKuponFactory extends Factory
     {
         return [
             'kode' => Str::random(10),
-            'kupon_id' => mt_rand(1,4),
-            'user_id' => mt_rand(1,10)
+            'kupon_id' => 1,
+            'user_id' => mt_rand(1,10),
+            'status_id' => mt_rand(1,2)
         ];
     }
 }

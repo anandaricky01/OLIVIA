@@ -25,7 +25,7 @@ h3 {
   justify-content: center;
 }
 .header {
-  background-image: url(img/artikel1/bg-artikel1.jpg);
+  background-image: url(/img/artikel1/bg-artikel1.jpg);
   height: 170vh;
   background-repeat: no-repeat;
   background-size: cover;
@@ -152,4 +152,21 @@ h3 {
 }
 ::-webkit-scrollbar-thumb:hover {
   background-color: #036451;
+}
+
+@media (max-width: 992px) {
+  #footer .logo img {
+    width: 130px;
+    height: 80px;
+  }
+}
+
+@media (min-width: 992px) {
+  .navbar .container .btn {
+    padding-left: 22px;
+  }
+  #footer .logo img {
+    width: 200px;
+    height: 100px;
+  }
 }

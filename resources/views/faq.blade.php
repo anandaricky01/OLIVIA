@@ -33,7 +33,7 @@
             </h2>
             <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
               <div class="accordion-body">
-                Kita semua bisa menjadi bagian dari SAGA, baik sebagai  SOBAT SAGA (penyetor), KURIR, ataupun KOLEGA. Namun tentunya harus memenuhi syarat dan ketentuan yang berlaku. Untuk mengetahui tiga bagian SAGA beserta dengan syarat dan ketentuannya, <a href="index.html"> silahkan kunjungi tautan berikut </a>
+                Kita semua bisa menjadi bagian dari SAGA, baik sebagai  SOBAT SAGA (penyetor), KURIR, ataupun KOLEGA. Namun tentunya harus memenuhi syarat dan ketentuan yang berlaku. Untuk mengetahui tiga bagian SAGA beserta dengan syarat dan ketentuannya, <a href="/beranda"> silahkan kunjungi tautan berikut </a>
               </div>
             </div>
           </div>
@@ -81,8 +81,8 @@
     <a class="btn text-white" href="#wa" tabindex="-1" aria-disabled="true">Hubungi Kami</a>
   </div>
   <div class="col-md-4 col-10 col-sm-6 col-lg-3 email shadow">
-    <i class="fab fa-whatsapp icon"></i>
-    <p>Pesan WhatsApp</p>
+    <i class="fab fa-instagram icon"></i>
+    <p>Instagram</p>
     <a class="btn text-white" href="#email" tabindex="-1" aria-disabled="true">Hubungi Kami</a>
   </div>
 </div>

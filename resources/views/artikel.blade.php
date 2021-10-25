@@ -79,7 +79,7 @@
         <div class="row justify-content-center d-flex flex-wrap">
         @foreach ($listCategory as $kategori)
         <div class="col-lg-2 col-md-3 col-sm-4- col-4 flex-wrap">
-            <a href="/artikel?kategori={{ $kategori->slug }}">
+            <a href="/artikel?category={{ $kategori->slug }}">
                 <button class="btn btn2" type="button" style="width: 80%;">{{ $kategori->name }}</button>
             </a>
         </div>

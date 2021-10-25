@@ -158,3 +158,20 @@ h3 {
     margin-bottom: -3px;
   }
 }
+
+@media (max-width: 992px) {
+  #footer .logo img {
+    width: 130px;
+    height: 80px;
+  }
+}
+
+@media (min-width: 992px) {
+  .navbar .container .btn {
+    padding-left: 22px;
+  }
+  #footer .logo img {
+    width: 200px;
+    height: 100px;
+  }
+}

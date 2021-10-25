@@ -35,7 +35,7 @@ class ArtikelController extends Controller
         return view('artikelSingle',[
             "title" => $artikel->title,
             "artikel" => $artikel,
-            "artikelLain" => Artikel::select("*")->where("category_id", mt_rand(1,5))->orderByDesc("id")->get(),
+            "artikelLain" => Artikel::select("*")->where("category_id", mt_rand(1,5))->orderByDesc("id")->paginate(3),
             'active' => 'artikel'
         ]);
     }

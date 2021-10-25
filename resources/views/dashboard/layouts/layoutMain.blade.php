@@ -68,6 +68,12 @@
           once: true, duration: 1300,offset: 100,
         });
       </script>
+
+      <script type="text/javascript">
+        $(window).on('load', function() {
+            $('#myModalHasil').modal('show');
+        });
+      </script>
     @endif
 
     @if (Request::is('dashboard/riwayat-kupon'))
